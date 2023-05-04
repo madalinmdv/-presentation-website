@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Street Zone Resell</title>
+    <script src="/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2a6cb9f994.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Page 1 -->
+    <section id="page-1" class="page">
+      <div>
+        <img src="/img/logo-1.jpg" alt="Logo" class="logo" />
+      </div>
+      <h1>Welcome to my presentation</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est harum
+        consequuntur, quos molestias, repudiandae libero consectetur eligendi
+        tempora a soluta voluptate iure beatae ipsam incidunt dolorum in quas.
+        Amet, ipsam?
+      </p>
+      <div>
+        <a href="#page-2" class="btn"
+          >Next Page <i class="fa-sharp fa-solid fa-arrow-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 2 -->
+    <section id="page-2" class="page">
+      <h1>Welcome to my presentation</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est harum
+        consequuntur, quos molestias, repudiandae libero consectetur eligendi
+        tempora a soluta voluptate iure beatae ipsam incidunt dolorum in quas.
+        Amet, ipsam?
+      </p>
+      <div>
+        <a href="#page-1" class="btn"
+          >Prev Page <i class="fa-sharp fa-solid fa-arrow-up"></i
+        ></a>
+        <a href="#page-3" class="btn"
+          >Next Page <i class="fa-sharp fa-solid fa-arrow-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 3 -->
+    <section id="page-3" class="page">
+      <h1>Welcome to my presentation</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est harum
+        consequuntur, quos molestias, repudiandae libero consectetur eligendi
+        tempora a soluta voluptate iure beatae ipsam incidunt dolorum in quas.
+        Amet, ipsam?
+      </p>
+      <div>
+        <a href="#page-2" class="btn"
+          >Prev Page <i class="fa-sharp fa-solid fa-arrow-up"></i
+        ></a>
+        <a href="#page-4" class="btn"
+          >Next Page <i class="fa-sharp fa-solid fa-arrow-down"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 4 -->
+    <section id="page-4" class="page">
+      <h1>Welcome to my presentation</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est harum
+        consequuntur, quos molestias, repudiandae libero consectetur eligendi
+        tempora a soluta voluptate iure beatae ipsam incidunt dolorum in quas.
+        Amet, ipsam?
+      </p>
+      <div>
+        <a href="#page-3" class="btn"
+          >Prev Page <i class="fa-sharp fa-solid fa-arrow-up"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- JQuery CDN -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      ;
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      ;
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Smooth Scrolling -->
+    <script>
+      $(".btn").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

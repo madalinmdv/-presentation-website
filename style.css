@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  line-height: 1.4;
+  background: #181818;
+  color: #fff;
+  overflow: hidden;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+#page-1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/img/background-1.jpg) no-repeat center center/cover;
+}
+
+#page-2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/img/background-2.jpg) no-repeat center center/cover;
+}
+
+#page-3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/img/background-3.jpg) no-repeat center center/cover;
+}
+
+#page-4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/img/background-4.jpg) no-repeat center center/cover;
+}
+
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+}
+
+.page p {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #801a04;
+  border-radius: 999px;
+  box-shadow: #761804 0 10px 20px -10px;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  margin: 0.5rem;
+  border: 0;
+  transition: 0.3s ease-in;
+}
+
+.btn:hover {
+  scale: 1.05;
+  background-color: 761804;
+}
+
+/* Page Animation */
+
+#page-1 h1 {
+  transform: translatex(2400px);
+  animation: heading 2s forwards ease-in;
+}
+
+#page-1 p {
+  transform: translateX(-2400px);
+  animation: text 2s forwards ease-in 2s;
+}
+
+/* Keyframes */
+
+@keyframes heading {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes text {
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Responsiveness */
+
+@media (max-width: 900px) {
+  .page {
+    padding: 0 2rem;
+  }
+
+  .page h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin: 1rem;
+  }
+}
